@@ -1,0 +1,57 @@
+# 題目描述
+
+Given a string s, find the length of the longest substring without repeating characters.
+
+Example:
+
+```
+Input: s = "pwwkew"
+Output: 3
+Explanation: The answer is "wke", with the length of 3.
+Notice that the answer must be a substring, "pwke" is a subsequence and not a substring.
+```
+
+## 效能
+
+```
+Runtime: 52 ms, faster than 92.13% of Python3 online submissions for Longest Substring Without Repeating Characters.
+Memory Usage: 13.9 MB, less than 78.59% of Python3 online submissions for Longest Substring Without Repeating Characters.
+```
+
+## 直觀寫法
+
+透過反覆添加／刪除字元，決定當前最大字串集合。
+```
+class Solution:
+    def lengthOfLongestSubstring(self, s: str) -> int:
+        str_set = set()
+        l = l_max = 0
+        for index, str_ in enumerate(s):
+            while str_ in str_set:
+                str_set.remove(s[ index - l ])
+                l -= 1
+            if str_ not in str_set:
+                str_set.add(str_)
+                l += 1
+                if l > l_max:
+                    l_max = l
+        return l_max
+```
+
+## 更快的解法：
+
+透過度量不重複字串長度來決定最大字串。
+```
+def lengthOfLongestSubstring(self, s):
+    dct = {}
+    max_so_far = curr_max = start = 0
+    for index, i in enumerate(s):
+        if i in dct and dct[i] >= start:
+            max_so_far = max(max_so_far, curr_max)
+            curr_max = index - dct[i]
+            start = dct[i] + 1
+        else:
+            curr_max += 1
+        dct[i] = index
+    return max(max_so_far, curr_max)
+```
