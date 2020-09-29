@@ -63,7 +63,7 @@
 	  for-loop:A.push_left(S[i])
 	  for-loop:A.pop_left()
 	```
-  
+	
 ### 2. 依數學問題特行設計算法
   
   **"凡是能用數字表示的問題，都是數學問題。"**
