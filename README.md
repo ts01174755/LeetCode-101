@@ -88,11 +88,11 @@
 
     Ex:輾轉相除法
 
-    ```
-    func_(a, b):
-	if (b == 0): return a;
-        else: return gcd(b, a % b);
-    ```
+	```
+	func_(a, b):
+	    if (b == 0): return a;
+	    else: return gcd(b, a % b);
+	```
   
   - 遞推法:
   
