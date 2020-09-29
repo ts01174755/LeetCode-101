@@ -91,7 +91,7 @@
 	```
 	func_(a, b):
 	    if (b == 0): return a;
-	    else: return gcd(b, a % b);
+	    else: return func_(b, a % b);
 	```
   
   - 遞推法:
