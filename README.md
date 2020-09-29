@@ -22,47 +22,48 @@
   
     - 陣列:
 
-	    Ex:對序列 S 排序。
+    	Ex:對序列 S 排序。
 
-	    ```
-	      //技數排序法
-	      for-loop: 陣列 A 紀錄 S 中元素 s 的個數。
-	      for-loop: 陣列 A 中依統計資訊提取 s (由小到大)。
-	    ```
+	```
+	//技數排序法
+	for-loop: 陣列 A 紀錄 S 中元素 s 的個數。
+	for-loop: 陣列 A 中依統計資訊提取 s (由小到大)。
+	```
 	    
     - 雜湊表:
     
-		Ex: 給定多個字串 S1, S2, ... , Sn 並儲存起來。
+	Ex: 給定多個字串 S1, S2, ... , Sn 並儲存起來。
 
-		```
-		func_hash_(S):
-		  //自訂義字串對數字的轉換
-		  return S2Num
-		main():
-		  S = "abcde"
-		  data_index = func_hash_(S)
-		  Array[data_index]=1
-		```
+	```
+	func_hash_(S):
+	    //自訂義字串對數字的轉換
+	    return S2Num
+	main():
+	    S = "abcde"
+	    data_index = func_hash_(S)
+ 	    Array[data_index]=1
+	```
     
   - 順序處理法:
     
-    - 佇列:先進先出
-    
+	- 佇列:先進先出
+
 	```
-	  String S = "abcde"
-	  array A
-	  for-loop:A.push_left(S[i])
-	  for-loop:A.pop_right()
+	String S = "abcde"
+	array A
+	for-loop:A.push_left(S[i])
+	for-loop:A.pop_right()
 	```
 
     - 堆疊:後進先出
     	
-    	```
-	  String S = "abcde"
-	  array A
-	  for-loop:A.push_left(S[i])
-	  for-loop:A.pop_left()
 	```
+	String S = "abcde"
+	array A
+	for-loop:A.push_left(S[i])
+	for-loop:A.pop_left()
+	```
+
 	
 ### 2. 依數學問題特行設計算法
   
@@ -88,8 +89,8 @@
     Ex:輾轉相除法
 
     ```
-    func_(a, b)
-        if (b == 0): return a;
+    func_(a, b):
+	if (b == 0): return a;
         else: return gcd(b, a % b);
     ```
   
