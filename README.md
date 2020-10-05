@@ -150,4 +150,10 @@ Ex:求函數最小值 -> 梯度下降法
 	result.add(func_sort_(greater))
 	return result;
 	end function
-    
+
+### 複合演算法:
+
+複合算法是將兩個算法合併在一起，各取所長解決問題的算法:
+
+#### 動態規劃:
+#### 回朔法(Backtracking):
