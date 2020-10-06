@@ -4,7 +4,9 @@
   
   如果有從頭啃完的童鞋們，還請留下聯絡方式，小弟會找你要簽名的。
   
-## 算法基礎的直觀理解
+## 基礎算法
+
+### 直觀理解
 
   小弟目前對算法可以理解成兩個部分:
   
@@ -20,51 +22,51 @@
   
   資料結構是演算法的基石，算法有很大一部份不是"怎麼算答案"，而是"怎麼找答案"。
   
-#### a. 記憶法 - 直接查找:
+  - 記憶法 - 直接查找:
 
-- 陣列:
-	
-	```
-	Ex:對序列 S 排序。
+	- 陣列:
 
-	//計數排序法
-	for-loop: 陣列 A 紀錄 S 中元素 s 的個數。
-	for-loop: 陣列 A 中依統計資訊提取 s (由小到大)。
-	```
+		```
+		Ex:對序列 S 排序。
 
-- 雜湊表:
+		//計數排序法
+		for-loop: 陣列 A 紀錄 S 中元素 s 的個數。
+		for-loop: 陣列 A 中依統計資訊提取 s (由小到大)。
+		```
 
-	```
-	Ex: 給定多個字串 S1, S2, ... , Sn 並儲存起來。
+	- 雜湊表:
 
-	func_hash_(S):
-	    //自訂義字串對數字的轉換
-	    return S2Num
-	main():
-	    S = "abcde"
-	    data_index = func_hash_(S)
-	    Array[data_index]=1
-	```
+		```
+		Ex: 給定多個字串 S1, S2, ... , Sn 並儲存起來。
+
+		func_hash_(S):
+		    //自訂義字串對數字的轉換
+		    return S2Num
+		main():
+		    S = "abcde"
+		    data_index = func_hash_(S)
+		    Array[data_index]=1
+		```
     
-#### b. 順序處理法:
+  - 順序處理法:
     
-- 佇列:先進先出
-	
-	```
-	String S = "abcde"
-	array A
-	for-loop:A.push_left(S[i])
-	for-loop:A.pop_right()
-	```
+	- 佇列:先進先出
 
-- 堆疊:後進先出
+		```
+		String S = "abcde"
+		array A
+		for-loop:A.push_left(S[i])
+		for-loop:A.pop_right()
+		```
 
-	```
-	String S = "abcde"
-	array A
-	for-loop:A.push_left(S[i])
-	for-loop:A.pop_left()
-	```
+	- 堆疊:後進先出
+
+		```
+		String S = "abcde"
+		array A
+		for-loop:A.push_left(S[i])
+		for-loop:A.pop_left()
+		```
 
 ### 2. 依數學問題特行設計算法
 
@@ -136,6 +138,11 @@
 
 	Ex:求函數最小值 -> 梯度下降法
 
+
+## 延伸算法:
+
+當我們熟悉了上述的基礎算法後，我們把多個算法的特長進行融合、延伸、推廣，從而產生比較複雜的算法。
+
 - 拆分法:
 
 	**大問題由不同小問題組成，將大問題拆成小問題，專注小問題。**
@@ -156,10 +163,7 @@
 		result.add(func_sort_(greater))
 		return result;
 	```
+	
+- 動態規劃:
 
-### 複合演算法:
-
-複合算法是將兩個算法合併在一起，各取所長解決問題的算法:
-
-#### 動態規劃:
-#### 回朔法(Backtracking):
+- 回朔法(Backtracking):
