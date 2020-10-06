@@ -146,15 +146,15 @@
 	
 	```
 	func_sort_(list)
-		pivot = 從 list 取出一基準點
-		    var less, greater, result
-		for-loop:
-			if list[i] > pivot: greater.add(list[i])
-			else: less.add(list[i])
-			result.add(func_sort_(less))
-			result.add(pivot)
-			result.add(func_sort_(greater))
-			return result;
+	    pivot = 從 list 取出一基準點
+		var less, greater, result
+	    for-loop:
+		if list[i] > pivot: greater.add(list[i])
+		else: less.add(list[i])
+		result.add(func_sort_(less))
+		result.add(pivot)
+		result.add(func_sort_(greater))
+		return result;
 	```
 
 ### 複合演算法:
