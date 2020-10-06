@@ -97,8 +97,7 @@
 	Ex:字串變整數
 
 	A = "26962869"
-	for-loop: 
-	sum += A[i] * pow(10,len(A)-i-1)
+	for-loop: sum += A[i] * pow(10,len(A)-i-1)
 
 遞推法和遞迴法一體兩面，在實作上有些許差異:
 
@@ -116,8 +115,7 @@ Start:試著解最小問題->
 
 	A = "26962869"
 	sum = 0
-	for-loop: 
-	sum += sum * 10 + A[i]
+	for-loop: sum += sum * 10 + A[i]
 
 #### e. 貪心法:
 
@@ -140,16 +138,15 @@ Ex:求函數最小值 -> 梯度下降法
 	Ex:快速排序法
 	
 	func_sort_(list)
-	pivot = 從 list 取出一基準點
-	    var less, greater, result
-	for-loop:
-	if list[i] > pivot: greater.add(list[i])
-	else: less.add(list[i])
-	result.add(func_sort_(less))
-	result.add(pivot)
-	result.add(func_sort_(greater))
-	return result;
-	end function
+		pivot = 從 list 取出一基準點
+		    var less, greater, result
+		for-loop:
+			if list[i] > pivot: greater.add(list[i])
+			else: less.add(list[i])
+			result.add(func_sort_(less))
+			result.add(pivot)
+			result.add(func_sort_(greater))
+			return result;
 
 ### 複合演算法:
 
