@@ -164,7 +164,7 @@
 		return result;
 	```
 
-- 回朔法(Backtracking):
+- 回朔法(Backtracking):http://web.ntnu.edu.tw/~algo/Backtracking.html#1
 
 	**下一步選擇跟上一步有關，逐步枚舉，失敗就返回上一步。 -> 反悔能解決所有人所犯下的錯誤，如果不能，那就反悔兩次。**
 
