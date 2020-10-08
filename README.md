@@ -163,7 +163,34 @@
 		result.add(func_sort_(greater))
 		return result;
 	```
-	
-- 動態規劃:
 
 - 回朔法(Backtracking):
+
+	**下一步選擇跟上一步有關，逐步枚舉，失敗就返回上一步。 -> 反悔能解決所有人所犯下的錯誤，如果不能，那就反悔兩次。**
+
+	回朔法是"枚舉法"跟"迭代法"的結合算法，框架如下：
+
+	第n維度枚舉一數，進行計算:
+
+	1. 符合枚舉條件：紀錄從 1 到 n 的結果，進行第 n+1 維度枚舉。
+
+	2. 不符合枚舉條件：枚舉下一數。
+
+	3. 枚舉完所有可能了：返回第 n-1 維度枚舉。
+	
+	```
+	void backtrack(int n, int w)
+	{
+	    if (condition_of_n > bounding): return answer;
+	    if (condition_of_n)
+	    {
+		Record the solution[n].
+		backtrack(n+1, condition_of_n+1 );
+	    }
+
+	    Record the solution[n].
+	    backtrack(n+1, condition_of_n+1 );
+	}
+	```
+
+- 動態規劃:
