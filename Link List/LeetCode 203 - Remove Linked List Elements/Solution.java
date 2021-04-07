@@ -1,21 +1,19 @@
+class Solution {
+    public ListNode removeElements(ListNode head, int val) {
+    	if (head == null) {
+          return null;
+        }
 
-public class Solution {
-	public ListNode removeElements(ListNode head, int val) {
-        if(head == null) {
-            return head;
-        }
-        
-        while(head != null && head.val == val) {
-            head = head.next;
-        }
-        ListNode h = head;
-        while(h != null && h.next != null) {
-            if(h.next.val == val) {
-                h.next = h.next.next;
-            } else {
-                h = h.next;
+        ListNode dummy_head = new ListNode(val+1,head);
+    	ListNode ft = dummy_head;
+    	while(ft.next != null && ft != null) {
+    		if(ft.next.val != val) {
+				ft = ft.next;
+    		} else {
+                ft.next = ft.next.next;
             }
-        }
+    	}
         
-        return head;
+        return dummy_head.next;
     }
+}
