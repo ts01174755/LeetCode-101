@@ -8,10 +8,10 @@ class Solution {
     	ListNode ft = dummy_head;
     	while(ft.next != null && ft != null) {
     		if(ft.next.val != val) {
-				ft = ft.next;
+			ft = ft.next;
     		} else {
-                ft.next = ft.next.next;
-            }
+	                ft.next = ft.next.next;
+            	}
     	}
         
         return dummy_head.next;
