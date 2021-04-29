@@ -22,8 +22,7 @@ class Solution {
 		dq.add(root);
 		while (dq.size() > 0) {
 			int size = dq.size();
-            List<Integer> subans = new ArrayList<>(size);
-      // List<Integer> subans = new ArrayList<Integer>; 較慢
+            List<Integer> subans = new ArrayList<>(size); // 初始宣告長度可加快一點時間
 			
 			for (int i = 0; i < size; i++) {
 				TreeNode node = dq.pop();
