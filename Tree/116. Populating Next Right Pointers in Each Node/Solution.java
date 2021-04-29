@@ -20,7 +20,37 @@ class Node {
     }
 };
 */
+// 神速
+class Solution {
+    public Node connect(Node root) {
+        
+        if(root == null) return null;
+        
+        Node pointer = root;
+        Node firstInALine = pointer.left;
+        
+        while(firstInALine != null) {
+  
+            while(pointer != null) {
+                pointer.left.next = pointer.right;
+            
+                if(pointer.next != null) {
+                    pointer.right.next = pointer.next.left;
+                }
+            
+                pointer = pointer.next;
+            }
+            
+            pointer = firstInALine;
+            firstInALine = pointer.left;
+        }
+        
+        return root;
+        
+    }
+}
 
+// 一般解法
 class Solution {
     public Node connect(Node root) {
 		if (root == null) return root; 
